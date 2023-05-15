@@ -3,7 +3,7 @@ import ToDo from "./ToDo/ToDo";
 
 export default function Agenda() {
     return (
-        <div className="container mx-auto p-16 bg-agenda shadow-lg">
+        <div className="container mx-auto p-16 bg-agenda shadow-lg h-fit">
             <h1 className="text-2xl font-bold mb-10 text-center">Mi plan para hoy</h1>
 
             <div className="grid grid-cols-7 gap-4 mb-4 bg-cyan-200 text-center">

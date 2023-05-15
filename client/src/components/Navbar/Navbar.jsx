@@ -14,7 +14,7 @@ export default function Navbar() {
             <ul className="flex  items-center w-full m-4 justify-center font-medium text-xl">
 
                 <li className="mr-4 hover:text-logo">
-                    <Link href="/">-Home-</Link>
+                    <Link href="/home">-Home-</Link>
                 </li>
                 <li className="mr-4 hover:text-logo">
                     <Link href="/Agenda">-Agenda-</Link>
@@ -27,12 +27,12 @@ export default function Navbar() {
                 </li>
                 </ul>
                 <div className="flex justify-center items-center p-1 font-bold">
-                <div className="rounded-md flex items-center bg-buttonBlue w-24 h-12 justify-center">
-                    <Link href="/register">Login</Link>
-                </div>
+                <Link href="/Login"><div className="rounded-md flex items-center bg-buttonBlue hover:bg-logo w-24 h-12 justify-center">
+                        <button>Login</button>
+                </div></Link>
                 </div>
             <div className="flex justify-center items-center p-1 font-bold">
-                <div className="rounded-md flex items-center bg-logo w-24 h-12 justify-center">
+                <div className="rounded-md flex items-center bg-logo hover:bg-buttonBlue w-24 h-12 justify-center">
                     LogOut
                 </div>
             </div>
