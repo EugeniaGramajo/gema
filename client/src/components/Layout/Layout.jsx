@@ -5,9 +5,9 @@ import Navbar from '../Navbar/Navbar';
 
 const Layout = ({ children }) => {
   return (
-    <div>
+    <div className="">
       <Navbar/>
-      <main className='min-h-screen  bg-bgHome2'>{children}</main>
+      <main className="h-full bg-red-500 ">{children}</main>
       {/* Aquí puedes agregar un footer u otros elementos comunes */}
     </div>
   );
