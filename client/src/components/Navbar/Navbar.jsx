@@ -6,10 +6,10 @@ export default function Navbar() {
 
     return (
         <nav className="bg-bgHome sticky top-0 flex shadow-md " style={{ fontFamily: 'Raleway, sans-serif' }}>
-            <div className="flex items-center mr-4 text-4xl text-logo px-10 p-1">
+          <Link href="/home"><div className="flex items-center mr-4 text-4xl text-logo px-10 p-1">
                 <Image src="/logoimage/logowhite4.jpg" alt="Logo" width={120} height={40} />
                 <p className="">G.E.M.A</p>
-            </div>
+            </div></Link>  
 
             <ul className="flex  items-center w-full m-4 justify-center font-medium text-xl">
 

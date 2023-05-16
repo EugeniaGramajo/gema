@@ -1,10 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-/* layer componentes hardcodea el div global para que renderize al 100% */
+
 @layer components {
   #__next {
-      @apply h-full bg-red-500;
+      @apply h-full bg-logo;
   }
 }
 :root {
