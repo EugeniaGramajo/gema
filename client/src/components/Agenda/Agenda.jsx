@@ -95,7 +95,6 @@ export default function Agenda() {
                                 </div><div className="p-1 w-full">
                                     <input className={`w-full h-10 bg-bgHome  ${isEditMode ? 'bg-home' : 'bg-cyan-100'}`}
                                         disabled={!isEditMode} />
-
                                 </div>
                                 {objectives.map((objective, index) => (
                                     <div className="p-1 w-full" key={index}>
@@ -108,7 +107,7 @@ export default function Agenda() {
                                     </div>
                                 ))}
                                 {isEditMode && (
-                                    <button className="bg-buttonBlue rounded-full text-white w-10 h-10 text-4xl text-center m-auto items-center" onClick={addObjective}>
+                                    <button className="bg-buttonBlue rounded-full flex flex-col text-white w-12 h-12 text-4xl text-center m-auto items-center" onClick={addObjective}>
                                         +
                                     </button>
                                 )}
@@ -118,27 +117,23 @@ export default function Agenda() {
                             {priorities.map((priority, priorityIndex) => (
                                 <div className="items-center w-full" key={priority.priority}>
                                     <h2 className="text-lg font-bold mb-2 ">Prioridades</h2>
-                                    <table className="table-auto flex flex-col justify-center items-center w-full">
-                                        <thead>
-                                            <tr className="text-center">
-                                                <th className="px-4 py-2">-Descripción-</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody className="w-full flex flex-col justify-center items-center">
-                                            <tr className="w-full">
-                                                <td className="px-4 py-2 w-full items-center flex">
+                                    <div className="table-auto flex flex-col justify-center items-center w-full">
+                                        <div className="text-center">
+                                            <div className="px-4 py-2">-Descripción-</div>
+                                        </div>
+                                        <div className="w-full flex flex-col justify-center items-center">
+                                            <div className="w-full">
+                                                <div className="px-4 py-2 w-full items-center flex">
                                                     <input
                                                         type="text"
                                                         className={`w-full h-10 bg-bgHome  ${isEditMode ? 'bg-home' : 'bg-cyan-100'}`}
                                                         disabled={!isEditMode}
                                                     />
-                                                </td>
-                                            </tr>
-
+                                                </div>
+                                            </div>
                                             {priority.items.map((item, itemIndex) => (
-                                                <tr className="w-full" key={itemIndex}>
-
-                                                    <td className="px-4 py-2 w-full items-center flex">
+                                                <div className="w-full" key={itemIndex}>
+                                                    <div className="px-4 py-2 w-full items-center flex">
                                                         <input
                                                             type="text"
                                                             className={`w-full h-10 bg-bgHome  ${isEditMode ? 'bg-home' : 'bg-cyan-100'}`}
@@ -146,20 +141,18 @@ export default function Agenda() {
                                                             onChange={(e) => handlePriorityChange(priorityIndex, itemIndex, e.target.value)}
                                                             disabled={!isEditMode}
                                                         />
-                                                    </td>
-                                                </tr>
+                                                    </div>
+                                                </div>
                                             ))}
                                             {isEditMode && (
-                                                <tr>
-                                                    <td colSpan="2" className="text-center items-center">
-                                                        <button className="bg-buttonBlue rounded-full text-white w-10 h-10 text-4xl text-center m-auto items-center" onClick={() => addItem(priorityIndex)}>
-                                                            +
-                                                        </button>
-                                                    </td>
-                                                </tr>
+                                                <div colSpan="2">
+                                                    <button className="bg-buttonBlue rounded-full flex flex-col text-white w-12 h-12 text-4xl text-center m-auto items-center" onClick={() => addItem(priorityIndex)}>
+                                                        +
+                                                    </button>
+                                                </div>
                                             )}
-                                        </tbody>
-                                    </table>
+                                        </div>
+                                    </div>
                                 </div>
                             ))}
                         </div>
